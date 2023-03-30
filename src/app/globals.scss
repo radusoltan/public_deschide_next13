@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        border-radius: 10vh;
+        background: #e2e2e2;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: #cbcbcb;
+        border-radius: 10vh;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #cbcbcb;
+    }
+}
+
+
+
+.fiCircle {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 24px !important;
+    border-radius: 100%;
+    border: none;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .06);
+    background: white;
+}
