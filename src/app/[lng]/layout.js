@@ -21,7 +21,7 @@ export default async function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <head />
-      <body className="2xl:mx-60 lg:mx-10 sm:m-0">
+      <body className="2xl:mx-96 sm:m-0">
       <Header categories={categories.data} lang={lng} />
       {children}
 
