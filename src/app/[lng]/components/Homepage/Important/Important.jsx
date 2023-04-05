@@ -9,7 +9,7 @@ import imageMain from "../../../../../../public/600x330.png";
 import mobileMain from "../../../../../../public/643x500.png"
 export const Important = ({articles, lng})=>{
 
-  console.log(articles)
+
 
 
   const numItems = articles.length
@@ -24,8 +24,8 @@ export const Important = ({articles, lng})=>{
 
       if (articles[i]){
 
-        const translated = articles[i].translations.find(trans=>trans.locale===lng)
-        const category = articles[i].category.translations.find(trans=>trans.locale===lng)
+        const translated = articles[i]
+        const category = articles[i].category
         initialItems.push({
           ...translated,
           category
@@ -49,11 +49,12 @@ export const Important = ({articles, lng})=>{
     return () => clearInterval(intervalId);
 
   }, [numItems]);
-  console.log(items)
+  // console.log(items)
 
   return <section className=" ">
     <div
         className="min-w-screen flex overflow-hidden relative">
+
       <div className="w-full md:hidden">
         <div className="flex ">
           <div className="w-1/2 p-5 rounded hover:shadow-md">
@@ -166,6 +167,7 @@ export const Important = ({articles, lng})=>{
           </div>
         </div>
       </div>
+
       <div className="md:flex hidden md:w-full items-center justify-between lg:hidden">
         <div className="w-3/4 flex items-center justify-between">
           <div className="w-1/2 p-5 rounded hover:shadow-md">
@@ -175,7 +177,7 @@ export const Important = ({articles, lng})=>{
 
             <Link href={`/${lng}/${items[0]?.category.slug}/${items[0]?.slug}`}>
             <h2 className="font-bold text-gray-800 text-md tracking-normal mt-5">
-              {items[0]?.title}
+              {items[0]?.title} 11
             </h2>
             </Link>
             <Link href={`/${lng}/${items[0]?.category.slug}`}>
@@ -239,8 +241,11 @@ export const Important = ({articles, lng})=>{
           </div>
         </div>
       </div>
-      {/*<div className="lg:flex hidden w-full bg-amber-900">*/}
-        <div className="min-w-screen lg-flex items-center overflow-hidden relative">
+
+
+      <div className="lg:flex hidden w-full bg-amber-900">
+        <div
+            className="min-w-screen flex items-center overflow-hidden relative">
           <div
               className="w-full rounded bg-white shadow-xl mx-auto text-gray-800 relative md:text-left md:flex"
           >
@@ -272,7 +277,7 @@ export const Important = ({articles, lng})=>{
 
                   <Link href={`/${lng}/${items[1]?.category.slug}/${items[1]?.slug}`}>
                   <h2 className="font-semibold text-gray-800 text-sm tracking-normal mt-5">
-                    {items[1]?.title}
+                    {items[1]?.title}11
                   </h2>
                   </Link>
 
@@ -387,7 +392,12 @@ export const Important = ({articles, lng})=>{
             </div>
           </div>
         </div>
-      {/*</div>*/}
+      </div>
+
+
+
+
+
     </div>
   </section>
 }
