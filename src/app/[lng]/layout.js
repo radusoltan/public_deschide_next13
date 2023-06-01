@@ -13,10 +13,11 @@ export default async function RootLayout({
   }
 }) {
 
-  // const categories = await axios.get('api/public/home?locale=ro')
-  const categories = await axios.get(`api/public/categories?locale=${lng}`)
+  const categories = await axios.get('api/public/categories?locale=${lng}')
+  // const response = await fetch(`https://api.deschide.local/api/public/categories?locale=${lng}`)
+  // const categories = response.json()
 
-  // console.log(categories.data)
+  console.log(categories)
 
   return (
     <html lang={lng} dir={dir(lng)}>

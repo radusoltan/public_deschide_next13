@@ -4,6 +4,8 @@ import Link from "next/link";
 
 export const LargeFeaturedList = ({articles, lng}) => {
 
+  // console.log(articles[0]?.images[0].thumbnails.find(th=>th.rendition_id===1)?.path)
+
   return <div className="min-w-screen flex items-center overflow-hidden relative w-full">
 
     <div
@@ -12,7 +14,7 @@ export const LargeFeaturedList = ({articles, lng}) => {
         <div className="w-full md:w-3/4 ">
           <div className="md:flex relative">
             <div className="w-full md:w-2/3">
-              <Image width={600} height={330} src={process.env.NEXT_PUBLIC_BACKEND_URL+articles[0]?.images[0].thumbnails.find(th=>th.rendition_id===1).path} alt={'image'} className="w-full relative z-10 p-5 rounded-lg"  />
+              <Image width={600} height={330} src={process.env.NEXT_PUBLIC_BACKEND_URL+articles[0]?.images[0].thumbnails.find(th=>th.rendition_id===1)?.path} alt={'image'} className="w-full relative z-10 p-5 rounded-lg"  />
             </div>
             <div className="w-full md:w-1/3">
               <div className="mt-5">

@@ -10,13 +10,13 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'api.deschide.local',
-        port: '',
-      },
-    ],
+    domains: ['api.deschide.local'],
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'api.deschide.local/',
+    //   },
+    // ],
   },
 }
 

@@ -72,6 +72,8 @@ export const FeaturedArticlesList = ({articles, lng}) => {
 
   }, [numItems]);
 
+  console.log(items)
+
 
   return <section className="min-w-screen relative">
     <MobileFeaturedList articles={items} lng={lng} />
